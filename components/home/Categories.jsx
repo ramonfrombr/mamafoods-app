@@ -4,43 +4,43 @@ import React from 'react'
 const items = [
     {
         image: require('../../assets/images/venezuela.png'),
-        text: 'Venezuela'
+        text: 'Venezuelan'
     },
     {
         image: require('../../assets/images/brazil.png'),
-        text: 'Brazil'
+        text: 'Brazilian'
     },
     {
         image: require('../../assets/images/colombia.png'),
-        text: 'Colombia'
+        text: 'Colombian'
     },
     {
         image: require('../../assets/images/mexico.png'),
-        text: 'Mexico'
+        text: 'Mexican'
     },
     {
         image: require('../../assets/images/ecuador.png'),
-        text: 'Ecuador'
+        text: 'Ecuadorian'
     },
     {
         image: require('../../assets/images/argentina.png'),
-        text: 'Argentina'
+        text: 'Argentinian'
     },
     {
         image: require('../../assets/images/uruguay.png'),
-        text: 'Uruguay'
+        text: 'Uruguayan'
     },
     {
         image: require('../../assets/images/chile.png'),
-        text: 'Chile'
+        text: 'Chilean'
     },
     {
         image: require('../../assets/images/peru.png'),
-        text: 'Peru'
+        text: 'Peruvian'
     },
     {
         image: require('../../assets/images/paraguay.png'),
-        text: 'Paraguay'
+        text: 'Paraguayan'
     },
 
 
@@ -87,6 +87,7 @@ export default function Categories() {
             paddingVertical: 10,
         }}
     >
+        <Text style={{ marginBottom: 10, color: 'grey', textAlign: 'center'}}>🥘 Cuisines</Text>
         <ScrollView horizontal showsHorizontalScrollIndicator={false}>
             {items.map((item, index) => (
                 <View

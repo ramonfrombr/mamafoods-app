@@ -20,7 +20,7 @@ export default function Home({navigation}) {
 
     const [restaurantsData, setRestaurantsData] = useState([]);
 
-    const [city, setCity] = useState('San Francisco');
+    const [city, setCity] = useState('Miami');
 
     const [activeTab, setActiveTab] = useState('Delivery');
 
@@ -31,7 +31,7 @@ export default function Home({navigation}) {
 
     const getRestaurantsFromYelp = async () => {
 
-        const yelpUrl = `https://api.yelp.com/v3/businesses/search?term=restaurants&location=${(city != "") ? city : 'San Francisco'}`;
+        const yelpUrl = `https://api.yelp.com/v3/businesses/search?term=restaurants&location=${(city != "") ? city : 'Miami'}`;
     
         const apiOptions =  {
             headers: {
@@ -52,8 +52,13 @@ export default function Home({navigation}) {
                 console.log("City: " + city);
                 console.log("Number of businesses: " + json.businesses.length)
                 console.log("City (business): " + json.businesses[0].transactions)
-            }
-        )
+            })
+            .catch(function(error) {
+                console.log('There has been a problem with your fetch operation: ' + error.message);
+                 // ADD THIS THROW error
+                  throw error;
+                });
+        
     }
 
     return (
